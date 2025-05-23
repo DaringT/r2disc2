@@ -2,7 +2,7 @@
 
 Tested OS's: Windows 7, Windows 10, Debian, Ubuntu
 
-There is a [Python-Linux]{https://github.com/DaringT/r2disc2/blob/master/src/serial_drive.py}, [C-Linux]{https://github.com/DaringT/r2disc2/blob/master/src/serial_drive.c} and [C-Win](https://github.com/DaringT/r2disc2/blob/master/src/win_serial.c) version 
+There is a [Python-Linux](https://github.com/DaringT/r2disc2/blob/master/src/serial_drive.py), [C-Linux](https://github.com/DaringT/r2disc2/blob/master/src/serial_drive.c) and [C-Win](https://github.com/DaringT/r2disc2/blob/master/src/win_serial.c) version 
 
 
 ```
