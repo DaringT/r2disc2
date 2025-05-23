@@ -1,3 +1,12 @@
+# Serial Driver for Amtren / Discmakers CD/DVD autoloading Robots
+
+Tested OS's: Windows 7, Windows 10, Debian, Ubuntu
+
+There is a Python-Linux, C-Linux and C-Win version 
+
+
+
+```
 Basics:
   DB-9 M to DB9 F straight through (no null-modem cable)
   Com port setup - 9600 (38400 for some) baud, 8N1, No flow control.
@@ -52,3 +61,4 @@ On the Kodak unit, when you have five or less discs, command "I" for Input/Inser
   P - Pick (before I/? in multiple drive bank systems)
   H - Get from bank 2 in multiple drive bank systems
   B - Accept from bank 2 in multiple drive bank systems
+```
