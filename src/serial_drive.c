@@ -15,6 +15,7 @@ char* write_port(char *device_name,char *command,char *buf) {
     fd = open(device_name, O_RDWR | O_NOCTTY | O_NDELAY);
     if (fd == -1){
         fprintf(stderr,"open_port: Unable to open %s", device_name);
+        printf("You may need to use sudo privilages");
     }else{
        if(!isatty(fd)){ 
            fprintf(stderr,"%s is not a tty\n",device_name);
@@ -53,7 +54,30 @@ char* write_port(char *device_name,char *command,char *buf) {
 
 void usage(){
     printf("serial_drive <device> <command>\n");
-    printf("serial_drive /dev/ttyS0 [C|I|A|G|S|V]\n");
+    printf("serial_drive COM1 [C|I|A|G|S|V]\n\n");
+
+    printf("V: Signup or version(sometimes required as first command)\n");
+    printf("C: Reset or Calibrate unit\n");
+    printf("I: Input disc from bin to drive\n");
+    printf("A: Accept disc from drive to output bin\n");
+    printf("G: Get disc from drive and hold in picker(required before R and sometimes A)\n");
+    printf("R: Move disc from picker to Reject bin\n");
+    printf("S: Status of mechanism Trial and Error\n");
+    printf("B: 'G'rab from Printer\n");
+    printf("H: If 'G'rabbing, put in CD Tray\n");
+    printf("P: Same as G\n");
+    printf("K: Input stack -> Printer,\n");
+    printf("If currently 'G'rabbing,\n");
+    printf("it will move that to the input queue,\n");
+    printf("drop it, and then move it to the printer.\n");
+    printf("D: Down\n");
+    printf("U: Up\n");
+    printf("L: Load Printer\n");
+    printf("M: Drop\n");
+    printf("N: Get from Printer\n");
+    printf("Q: Accept from Printer\n");
+    printf("T: Test(input -> cd_tray, cd_tray -> accept_bin)\n");
+    printf("W: some type of 3 number status\n");
 }
 
 int main(int argc, char *argv[]){
